@@ -1,5 +1,6 @@
 class Compte {
   double _solde;
+  final String numeroCompte;
 
-  Compte() : _solde = 0.0;
+  Compte(this.numeroCompte) : _solde = 0.0;
 }
