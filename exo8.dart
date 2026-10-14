@@ -30,5 +30,26 @@ void main() {
   livre1.afficherInfos();
   livre2.afficherInfos();
 
+  var roman1 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+  var roman2 = Roman("Harry Potter", "J.K. Rowling", "Fantastique");
+
+  roman1.afficherInfos();
+  roman1.afficherGenre();
+
+  roman2.afficherInfos();
+  roman2.afficherGenre();
+
   Livre.afficherTotal();
+}
+
+
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre)
+      : super(titre, auteur);
+
+  void afficherGenre() {
+    print("Genre: $genre");
+  }
 }
