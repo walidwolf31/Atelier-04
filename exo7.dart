@@ -3,5 +3,7 @@ class Tache {
 
   static int nombreTotal = 0;
 
-  Tache(this.description);
+  Tache(this.description) {
+    nombreTotal++;
+  }
 }
