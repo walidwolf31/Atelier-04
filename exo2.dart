@@ -8,4 +8,8 @@ class Point {
     _x = _x + dx;
     _y = _y + dy;
   }
+
+  void display() {
+    print('Point : ($_x, $_y)');
+  }
 }
