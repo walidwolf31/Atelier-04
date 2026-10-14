@@ -1,11 +1,25 @@
 class Livre {
   String titre;
   String auteur;
+  int _pages;
 
-  Livre(this.titre, this.auteur);
+  static int totalLivres = 0;
+
+  Livre(this.titre, this.auteur, [this._pages = 200]) {
+    totalLivres++;
+  }
+
+  int get pages {
+    return _pages;
+  }
 
   void afficherInfos() {
     print("Titre: $titre, Auteur: $auteur");
+    print("Pages: $pages");
+  }
+
+  static void afficherTotal() {
+    print("Nombre total de livres : $totalLivres");
   }
 }
 
@@ -15,4 +29,6 @@ void main() {
 
   livre1.afficherInfos();
   livre2.afficherInfos();
+
+  Livre.afficherTotal();
 }
